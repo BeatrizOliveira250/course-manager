@@ -6,6 +6,9 @@ import { CourseListComponent } from './courses/course-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule,
+    MatFormFieldModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
