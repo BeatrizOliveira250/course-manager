@@ -2,11 +2,16 @@
   flex: 1 1 auto;
 }
 
+/* Structure */
 table {
   width: 90%;
   margin: auto;
 }
 
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
 tr.example-detail-row {
   height: 0;
 }
