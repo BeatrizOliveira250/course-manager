@@ -5,8 +5,8 @@ import { Course } from './course';
 
 export interface CourseComponent{
   id: number;
-  name: string;
   imageUrl: string;
+  name: string;
   price: number;
   code: string;
   duration: number;
@@ -17,8 +17,8 @@ export interface CourseComponent{
 const ELEMENT_DATA: CourseComponent[] = [
   {
     id: 1,
-    name: 'Agular: Form',
-    imageUrl: '',
+    imageUrl: '/assets/images/forms.png',
+    name: 'Angular-Form',
     price: 99.99,
     code: 'XLR-8725',
     duration: 120,
@@ -28,13 +28,13 @@ const ELEMENT_DATA: CourseComponent[] = [
   },
   {
     id: 2,
-    name: 'Agular: HTTP',
-    imageUrl: '',
-    price: 99.99,
-    code: 'XLR-8725',
-    duration: 120,
-    rating: 4.5,
-    releaseDate: 'November, 3, 2020',
+    imageUrl: '/assets/images/http.png',
+    name: 'Agular-HTTP',
+    price: 45.99,
+    code: 'KJS-2398',
+    duration: 90,
+    rating: 4,
+    releaseDate: 'November, 5, 2020',
 
   }
 ];
@@ -47,7 +47,7 @@ const ELEMENT_DATA: CourseComponent[] = [
 })
 
 export class CourseListComponent{
-  displayedColumns: string[] = ['id', 'name', 'imageUrl', 'price', 'code', 'duration', 'rating', 'releaseDate'];
+  displayedColumns: string[] = ['imageUrl', 'name','price', 'code', 'duration', 'rating', 'releaseDate'];
   dataSource = ELEMENT_DATA;
 
 }
