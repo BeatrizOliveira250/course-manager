@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import { Course } from './course';
+import { CourseService } from './course.service';
 
 
 export interface CourseComponent{
@@ -14,30 +15,7 @@ export interface CourseComponent{
   releaseDate: string;
 }
 
-const ELEMENT_DATA: CourseComponent[] = [
-  {
-    id: 1,
-    imageUrl: '/assets/images/forms.png',
-    name: 'Angular-Form',
-    price: 99.99,
-    code: 'XLR-8725',
-    duration: 120,
-    rating: 4.5,
-    releaseDate: 'November, 3, 2020',
-
-  },
-  {
-    id: 2,
-    imageUrl: '/assets/images/http.png',
-    name: 'Agular-HTTP',
-    price: 45.99,
-    code: 'KJS-2398',
-    duration: 90,
-    rating: 4,
-    releaseDate: 'November, 5, 2020',
-
-  }
-];
+const ELEMENT_DATA: CourseComponent[] = [];
 
 
 @Component({
@@ -50,6 +28,9 @@ export class CourseListComponent{
   displayedColumns: string[] = ['imageUrl', 'name','price', 'code', 'duration', 'rating', 'releaseDate'];
   dataSource = ELEMENT_DATA;
 
+  constructor(private courseService: CourseService) {
+    this.dataSource = this.courseService.retrieveAll()
+  }
 }
 
 
